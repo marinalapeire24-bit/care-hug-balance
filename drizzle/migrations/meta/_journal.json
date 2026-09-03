@@ -1,0 +1,90 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1788463019107,
+      "tag": "0000_create_profiles_and_roles",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1788463046578,
+      "tag": "0001_create_care_domain_tables",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1788463089910,
+      "tag": "0002_create_seed_demo_data_function",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1788463104566,
+      "tag": "0003_tighten_function_grants",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1788463125265,
+      "tag": "0004_add_reality_and_invisible_work",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1788463166039,
+      "tag": "0005_enrich_seed_demo_data_v2",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1788463178900,
+      "tag": "0006_fix_profiles_policy_and_role_constraint",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "7",
+      "when": 1788463215071,
+      "tag": "0007_fix_invisible_tasks_update_policy_and_seed",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "7",
+      "when": 1788463262936,
+      "tag": "0008_create_carebalance_pathway_schema",
+      "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "7",
+      "when": 1788463286075,
+      "tag": "0009_secure_database_access_controls",
+      "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "7",
+      "when": 1788463299875,
+      "tag": "0010_update_handle_new_user_with_role",
+      "breakpoints": true
+    },
+    {
+      "idx": 11,
+      "version": "7",
+      "when": 1788463322657,
+      "tag": "0011_create_leads_and_notifications_tables",
+      "breakpoints": true
+    }
+  ]
+}

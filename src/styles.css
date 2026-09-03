@@ -18,6 +18,50 @@
  * 2. Register it in @theme inline as --color-<name>: var(--<name>)
  */
 
+@theme {
+  --font-sans: 'Inter', system-ui, sans-serif;
+
+  --color-brand-50: #effcf6;
+  --color-brand-100: #d3f5e6;
+  --color-brand-200: #aae9d1;
+  --color-brand-300: #72d7b6;
+  --color-brand-400: #3dbf98;
+  --color-brand-500: #1ea47e;
+  --color-brand-600: #118466;
+  --color-brand-700: #0f6a54;
+  --color-brand-800: #105444;
+  --color-brand-900: #0e453a;
+
+  --color-ink-50: #f6f7f9;
+  --color-ink-100: #eceef2;
+  --color-ink-200: #d5d9e2;
+  --color-ink-300: #b0b8c8;
+  --color-ink-400: #8590a6;
+  --color-ink-500: #66718a;
+  --color-ink-600: #515a71;
+  --color-ink-700: #43495c;
+  --color-ink-800: #3a3f4e;
+  --color-ink-900: #0f1420;
+
+  --color-danger-50: #fef2f2;
+  --color-danger-100: #fee2e2;
+  --color-danger-500: #ef4444;
+  --color-danger-600: #dc2626;
+  --color-danger-700: #b91c1c;
+
+  --color-warn-50: #fff7ed;
+  --color-warn-100: #ffedd5;
+  --color-warn-500: #f59e0b;
+  --color-warn-600: #d97706;
+  --color-warn-700: #b45309;
+
+  --color-info-50: #eff6ff;
+  --color-info-100: #dbeafe;
+  --color-info-500: #3b82f6;
+  --color-info-600: #2563eb;
+  --color-info-700: #1d4ed8;
+}
+
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -140,5 +184,36 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+  }
+}
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    background-color: var(--color-ink-50);
+    color: var(--color-ink-900);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
+  }
+  .dark body {
+    background-color: var(--color-ink-900);
+    color: var(--color-ink-50);
+  }
+  h1, h2, h3 {
+    line-height: 1.2;
+  }
+}
+
+@utility safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+@utility tap {
+  transition-property: transform;
+  transition-duration: 100ms;
+  &:active {
+    scale: 0.98;
   }
 }
