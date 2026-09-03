@@ -438,6 +438,113 @@ export type Database = {
         }
         Relationships: []
       }
+      leads: {
+        Row: {
+          assigned_to: string | null
+          called_at: string | null
+          city: string | null
+          created_at: string
+          email: string | null
+          full_name: string
+          id: string
+          phone: string
+          preferred_contact_time: string | null
+          priority_score: number
+          qualification_note: string
+          relationship: string
+          service_type: string
+          situation: string
+          status: string
+          updated_at: string
+          urgency: string
+        }
+        Insert: {
+          assigned_to?: string | null
+          called_at?: string | null
+          city?: string | null
+          created_at?: string
+          email?: string | null
+          full_name: string
+          id?: string
+          phone: string
+          preferred_contact_time?: string | null
+          priority_score?: number
+          qualification_note?: string
+          relationship?: string
+          service_type?: string
+          situation?: string
+          status?: string
+          updated_at?: string
+          urgency?: string
+        }
+        Update: {
+          assigned_to?: string | null
+          called_at?: string | null
+          city?: string | null
+          created_at?: string
+          email?: string | null
+          full_name?: string
+          id?: string
+          phone?: string
+          preferred_contact_time?: string | null
+          priority_score?: number
+          qualification_note?: string
+          relationship?: string
+          service_type?: string
+          situation?: string
+          status?: string
+          updated_at?: string
+          urgency?: string
+        }
+        Relationships: []
+      }
+      notifications: {
+        Row: {
+          created_at: string
+          id: string
+          link_id: string | null
+          link_tab: string | null
+          message: string
+          read: boolean
+          role_target: string | null
+          title: string
+          type: string
+          user_id: string | null
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          link_id?: string | null
+          link_tab?: string | null
+          message?: string
+          read?: boolean
+          role_target?: string | null
+          title: string
+          type: string
+          user_id?: string | null
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          link_id?: string | null
+          link_tab?: string | null
+          message?: string
+          read?: boolean
+          role_target?: string | null
+          title?: string
+          type?: string
+          user_id?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "notifications_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       pathway_history: {
         Row: {
           action: string

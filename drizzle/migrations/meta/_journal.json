@@ -78,6 +78,13 @@
       "when": 1788463299875,
       "tag": "0010_update_handle_new_user_with_role",
       "breakpoints": true
+    },
+    {
+      "idx": 11,
+      "version": "7",
+      "when": 1788463322657,
+      "tag": "0011_create_leads_and_notifications_tables",
+      "breakpoints": true
     }
   ]
 }
