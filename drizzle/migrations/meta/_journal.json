@@ -43,6 +43,13 @@
       "when": 1788463166039,
       "tag": "0005_enrich_seed_demo_data_v2",
       "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1788463178900,
+      "tag": "0006_fix_profiles_policy_and_role_constraint",
+      "breakpoints": true
     }
   ]
 }
