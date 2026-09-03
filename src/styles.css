@@ -186,3 +186,34 @@
     color: var(--color-foreground);
   }
 }
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    background-color: var(--color-ink-50);
+    color: var(--color-ink-900);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
+  }
+  .dark body {
+    background-color: var(--color-ink-900);
+    color: var(--color-ink-50);
+  }
+  h1, h2, h3 {
+    line-height: 1.2;
+  }
+}
+
+@utility safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+@utility tap {
+  transition-property: transform;
+  transition-duration: 100ms;
+  &:active {
+    scale: 0.98;
+  }
+}
