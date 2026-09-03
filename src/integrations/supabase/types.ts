@@ -57,11 +57,17 @@ export type Database = {
       }
       interventions: {
         Row: {
+          actual_difficulty: number | null
+          actual_duration: number | null
+          actual_end: string | null
+          actual_start: string | null
+          actual_travel: number | null
           address: string | null
           caregiver_id: string
           created_at: string | null
           difficulty_level: number
           duration_minutes: number
+          extra_tasks: string | null
           id: string
           instructions: string
           patient_id: string
@@ -71,13 +77,20 @@ export type Database = {
           scheduled_at: string
           status: string
           travel_minutes: number
+          variance_reason: string | null
         }
         Insert: {
+          actual_difficulty?: number | null
+          actual_duration?: number | null
+          actual_end?: string | null
+          actual_start?: string | null
+          actual_travel?: number | null
           address?: string | null
           caregiver_id?: string
           created_at?: string | null
           difficulty_level?: number
           duration_minutes?: number
+          extra_tasks?: string | null
           id?: string
           instructions?: string
           patient_id: string
@@ -87,13 +100,20 @@ export type Database = {
           scheduled_at: string
           status?: string
           travel_minutes?: number
+          variance_reason?: string | null
         }
         Update: {
+          actual_difficulty?: number | null
+          actual_duration?: number | null
+          actual_end?: string | null
+          actual_start?: string | null
+          actual_travel?: number | null
           address?: string | null
           caregiver_id?: string
           created_at?: string | null
           difficulty_level?: number
           duration_minutes?: number
+          extra_tasks?: string | null
           id?: string
           instructions?: string
           patient_id?: string
@@ -103,6 +123,7 @@ export type Database = {
           scheduled_at?: string
           status?: string
           travel_minutes?: number
+          variance_reason?: string | null
         }
         Relationships: [
           {
@@ -113,6 +134,33 @@ export type Database = {
             referencedColumns: ["id"]
           },
         ]
+      }
+      invisible_tasks: {
+        Row: {
+          caregiver_id: string
+          created_at: string | null
+          duration_minutes: number
+          id: string
+          note: string
+          type: string
+        }
+        Insert: {
+          caregiver_id?: string
+          created_at?: string | null
+          duration_minutes?: number
+          id?: string
+          note?: string
+          type: string
+        }
+        Update: {
+          caregiver_id?: string
+          created_at?: string | null
+          duration_minutes?: number
+          id?: string
+          note?: string
+          type?: string
+        }
+        Relationships: []
       }
       patient_alerts: {
         Row: {
