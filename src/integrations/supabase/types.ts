@@ -728,6 +728,10 @@ export type Database = {
     }
     Functions: {
       seed_demo_data: { Args: never; Returns: undefined }
+      set_user_role: {
+        Args: { p_role: string; p_user_id: string }
+        Returns: undefined
+      }
     }
     Enums: {
       [_ in never]: never

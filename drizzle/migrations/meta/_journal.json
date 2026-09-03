@@ -64,6 +64,13 @@
       "when": 1788463262936,
       "tag": "0008_create_carebalance_pathway_schema",
       "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "7",
+      "when": 1788463286075,
+      "tag": "0009_secure_database_access_controls",
+      "breakpoints": true
     }
   ]
 }
