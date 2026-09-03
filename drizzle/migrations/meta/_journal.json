@@ -8,6 +8,13 @@
       "when": 1788463019107,
       "tag": "0000_create_profiles_and_roles",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1788463046578,
+      "tag": "0001_create_care_domain_tables",
+      "breakpoints": true
     }
   ]
 }

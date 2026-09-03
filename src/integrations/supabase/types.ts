@@ -14,6 +14,215 @@ export type Database = {
   }
   public: {
     Tables: {
+      difficulty_reports: {
+        Row: {
+          caregiver_id: string
+          created_at: string | null
+          id: string
+          intervention_id: string | null
+          note: string
+          status: string
+          suggested_action: string
+          type: string
+        }
+        Insert: {
+          caregiver_id?: string
+          created_at?: string | null
+          id?: string
+          intervention_id?: string | null
+          note?: string
+          status?: string
+          suggested_action?: string
+          type: string
+        }
+        Update: {
+          caregiver_id?: string
+          created_at?: string | null
+          id?: string
+          intervention_id?: string | null
+          note?: string
+          status?: string
+          suggested_action?: string
+          type?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "difficulty_reports_intervention_id_fkey"
+            columns: ["intervention_id"]
+            isOneToOne: false
+            referencedRelation: "interventions"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      interventions: {
+        Row: {
+          address: string | null
+          caregiver_id: string
+          created_at: string | null
+          difficulty_level: number
+          duration_minutes: number
+          id: string
+          instructions: string
+          patient_id: string
+          required_equipment: string
+          required_skills: string
+          room: string | null
+          scheduled_at: string
+          status: string
+          travel_minutes: number
+        }
+        Insert: {
+          address?: string | null
+          caregiver_id?: string
+          created_at?: string | null
+          difficulty_level?: number
+          duration_minutes?: number
+          id?: string
+          instructions?: string
+          patient_id: string
+          required_equipment?: string
+          required_skills?: string
+          room?: string | null
+          scheduled_at: string
+          status?: string
+          travel_minutes?: number
+        }
+        Update: {
+          address?: string | null
+          caregiver_id?: string
+          created_at?: string | null
+          difficulty_level?: number
+          duration_minutes?: number
+          id?: string
+          instructions?: string
+          patient_id?: string
+          required_equipment?: string
+          required_skills?: string
+          room?: string | null
+          scheduled_at?: string
+          status?: string
+          travel_minutes?: number
+        }
+        Relationships: [
+          {
+            foreignKeyName: "interventions_patient_id_fkey"
+            columns: ["patient_id"]
+            isOneToOne: false
+            referencedRelation: "patients"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      patient_alerts: {
+        Row: {
+          created_at: string | null
+          id: string
+          level: string
+          message: string
+          patient_id: string
+        }
+        Insert: {
+          created_at?: string | null
+          id?: string
+          level?: string
+          message: string
+          patient_id: string
+        }
+        Update: {
+          created_at?: string | null
+          id?: string
+          level?: string
+          message?: string
+          patient_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "patient_alerts_patient_id_fkey"
+            columns: ["patient_id"]
+            isOneToOne: false
+            referencedRelation: "patients"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      patient_changes: {
+        Row: {
+          category: string
+          created_at: string | null
+          description: string
+          id: string
+          occurred_at: string
+          patient_id: string
+          source: string
+        }
+        Insert: {
+          category?: string
+          created_at?: string | null
+          description: string
+          id?: string
+          occurred_at?: string
+          patient_id: string
+          source?: string
+        }
+        Update: {
+          category?: string
+          created_at?: string | null
+          description?: string
+          id?: string
+          occurred_at?: string
+          patient_id?: string
+          source?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "patient_changes_patient_id_fkey"
+            columns: ["patient_id"]
+            isOneToOne: false
+            referencedRelation: "patients"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      patients: {
+        Row: {
+          address: string | null
+          birth_date: string | null
+          created_at: string | null
+          environment: string
+          first_name: string
+          fragility_level: number
+          id: string
+          last_name: string
+          room: string | null
+          summary: string
+        }
+        Insert: {
+          address?: string | null
+          birth_date?: string | null
+          created_at?: string | null
+          environment?: string
+          first_name: string
+          fragility_level?: number
+          id?: string
+          last_name: string
+          room?: string | null
+          summary?: string
+        }
+        Update: {
+          address?: string | null
+          birth_date?: string | null
+          created_at?: string | null
+          environment?: string
+          first_name?: string
+          fragility_level?: number
+          id?: string
+          last_name?: string
+          room?: string | null
+          summary?: string
+        }
+        Relationships: []
+      }
       profiles: {
         Row: {
           created_at: string | null
